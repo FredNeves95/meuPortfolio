@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+
+import Header from './components/Header';
+
+const Container = styled.div`
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+`;
+
+
+const Body = styled.div` 
+background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding-top: 14vh;
+
+  hr{
+    border: none;
+    background-color: #03989E;
+    height: 1px;
+    width: 100%;
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <Body>
+        <hr />
+      </Body>
+    </Container>
   );
 }
 
