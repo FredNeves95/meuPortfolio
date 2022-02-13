@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import navMenu from "../images/navmenu.png";
+import Link from "react-scroll/modules/components/Link";
 
 const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
-  height: 14vh;
+  height: 132px;
+  z-index: 1;
 
   hr {
     border: none;
@@ -21,8 +23,9 @@ const HeaderStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 14vh;
+  height: 132px;
   width: 100vw;
+  position: relative;
 
   img {
     height: 100%;
@@ -159,22 +162,36 @@ const Header = () => {
         {(toggleMenu || screenWidth > 620) && (
           <HeaderMenu>
             <li className="items">
-              Quem sou
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-132}
+              >
+                Quem sou
+              </Link>
               <hr />
             </li>
 
             <li className="items">
-              Conhecimentos
+              <Link to="skills" spy={true} smooth={true} offset={-132}>
+                Conhecimentos
+              </Link>
               <hr />
             </li>
 
             <li className="items">
-              Projetos
+              <Link to="projects" spy={true} smooth={true} offset={-132}>
+                Projetos
+              </Link>
               <hr />
             </li>
 
             <li className="items">
-              Contato
+              <Link to="contact" spy={true} smooth={true} offset={-132}>
+                Contato
+              </Link>
               <hr />
             </li>
           </HeaderMenu>

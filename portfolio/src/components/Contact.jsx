@@ -5,10 +5,12 @@ const Container = styled.div`
   background-color: blue;
   height: 86vh;
   width: 100%;
+  position: absolute;
+  top: 272vh;
 `;
 
 const Contact = () => {
-  return <Container>Contact</Container>;
+  return <Container id="contact">Contact</Container>;
 };
 
 export default Contact;

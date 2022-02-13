@@ -5,10 +5,12 @@ const Container = styled.div`
   background-color: yellow;
   height: 86vh;
   width: 100%;
+  position: absolute;
+  top: 186vh;
 `;
 
 const Projects = () => {
-  return <Container>Projects</Container>;
+  return <Container id="projects">Projects</Container>;
 };
 
 export default Projects;

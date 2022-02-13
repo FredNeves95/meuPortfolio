@@ -6,10 +6,12 @@ const Container = styled.div`
   height: 86vh;
   width: 100%;
   margin: 0;
+  position: absolute;
+  top: 14vh;
 `;
 
 const AboutMe = () => {
-  return <Container>AboutMe</Container>;
+  return <Container id="about">AboutMe</Container>;
 };
 
 export default AboutMe;
