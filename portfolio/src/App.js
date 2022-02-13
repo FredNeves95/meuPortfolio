@@ -2,26 +2,24 @@ import './App.css';
 import styled from 'styled-components';
 
 import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 const Container = styled.div`
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   position: relative;
 `;
 
 
 const Body = styled.div` 
-background-color: black;
+  background-color: black;
   color: white;
-  min-height: 100vh;
+  width: 100%;
   padding-top: 14vh;
-
-  hr{
-    border: none;
-    background-color: #03989E;
-    height: 1px;
-    width: 100%;
-  }
+ 
 `
 
 function App() {
@@ -29,7 +27,10 @@ function App() {
     <Container>
       <Header />
       <Body>
-        <hr />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <Contact />
       </Body>
     </Container>
   );

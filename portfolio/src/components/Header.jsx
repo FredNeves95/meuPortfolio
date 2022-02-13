@@ -4,16 +4,26 @@ import logo from "../images/logo.png";
 import navMenu from "../images/navmenu.png";
 
 const HeaderContainer = styled.div`
-  background-color: black;
-  height: 14vh;
-  width: 100vw;
-  padding: 8px;
   position: fixed;
   top: 0;
+  height: 14vh;
+
+  hr {
+    border: none;
+    background-color: #03989e;
+    height: 1px;
+    width: 100%;
+  }
+`;
+const HeaderStyle = styled.div`
+  background-color: black;
+  padding: 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  //teste
+  justify-content: space-around;
+  height: 14vh;
+  width: 100vw;
+
   img {
     height: 100%;
   }
@@ -41,7 +51,7 @@ const HeaderMenu = styled.ul`
   list-style-type: none;
 
   li {
-    margin: 8px;
+    margin: 0 8px;
     padding: 4px;
     font-size: 20px;
     color: gray;
@@ -97,8 +107,6 @@ const HeaderMenu = styled.ul`
             #03989e 50%,
             rgba(0, 98, 102, 1) 100%
           );
-        /* border-image: 
-          100% 0 100% 0/3px 0 3px 0 stretch; */
       }
     }
     .items:nth-child(1) {
@@ -146,33 +154,36 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <img src={logo} alt="Logotipo Frederico" />
-      {(toggleMenu || screenWidth > 620) && (
-        <HeaderMenu>
-          <li className="items">
-            Quem sou
-            <hr />
-          </li>
+      <HeaderStyle>
+        <img src={logo} alt="Logotipo Frederico" />
+        {(toggleMenu || screenWidth > 620) && (
+          <HeaderMenu>
+            <li className="items">
+              Quem sou
+              <hr />
+            </li>
 
-          <li className="items">
-            Conhecimentos
-            <hr />
-          </li>
+            <li className="items">
+              Conhecimentos
+              <hr />
+            </li>
 
-          <li className="items">
-            Projetos
-            <hr />
-          </li>
+            <li className="items">
+              Projetos
+              <hr />
+            </li>
 
-          <li className="items">
-            Contato
-            <hr />
-          </li>
-        </HeaderMenu>
-      )}
-      <div className="btn" onClick={toggleNav}>
-        <img src={navMenu} alt="ícone de menu" />
-      </div>
+            <li className="items">
+              Contato
+              <hr />
+            </li>
+          </HeaderMenu>
+        )}
+        <div className="btn" onClick={toggleNav}>
+          <img src={navMenu} alt="ícone de menu" />
+        </div>
+      </HeaderStyle>
+      <hr />
     </HeaderContainer>
   );
 };
