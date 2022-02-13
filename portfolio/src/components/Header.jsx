@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
+import navMenu from "../images/navmenu.png";
 
 const HeaderContainer = styled.div`
   background-color: black;
@@ -12,16 +13,34 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  //teste
   img {
     height: 100%;
   }
+
+  .btn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 5.5vh;
+  }
+
+  @media screen and (max-width: 620px) {
+    .btn {
+      display: block;
+      cursor: pointer;
+      img {
+        width: 24px;
+      }
+    }
+  }
 `;
 
-const HeaderMenu = styled.div`
+const HeaderMenu = styled.ul`
   display: flex;
+  list-style-type: none;
 
-  h2 {
+  li {
     margin: 8px;
     padding: 4px;
     font-size: 20px;
@@ -56,28 +75,104 @@ const HeaderMenu = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 0 40px 0 16px;
+    animation: fadeIn 1s linear;
+    animation-fill-mode: forwards;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        border: none;
+      }
+      to {
+        opacity: 1;
+        background-color: black;
+        border: 1px solid
+          linear-gradient(
+            rgba(0, 98, 102, 1) 1%,
+            #03989e 50%,
+            rgba(0, 98, 102, 1) 100%
+          );
+        /* border-image: 
+          100% 0 100% 0/3px 0 3px 0 stretch; */
+      }
+    }
+    .items:nth-child(1) {
+      margin-top: 180px;
+    }
+    .items {
+      width: 100%;
+      margin: 1px;
+      margin-right: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 0;
+      text-align: center;
+      border: 1px solid #03989e;
+      :hover {
+        color: white;
+        transition: 1s ease-in;
+        hr {
+          animation: none;
+        }
+      }
+    }
+  }
 `;
 
 const Header = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
   return (
     <HeaderContainer>
       <img src={logo} alt="Logotipo Frederico" />
-      <HeaderMenu>
-        <h2>
-          Quem sou
-          <hr />
-        </h2>
+      {(toggleMenu || screenWidth > 620) && (
+        <HeaderMenu>
+          <li className="items">
+            Quem sou
+            <hr />
+          </li>
 
-        <h2>
-          Conhecimentos
-          <hr />
-        </h2>
+          <li className="items">
+            Conhecimentos
+            <hr />
+          </li>
 
-        <h2>
-          Projetos
-          <hr />
-        </h2>
-      </HeaderMenu>
+          <li className="items">
+            Projetos
+            <hr />
+          </li>
+
+          <li className="items">
+            Contato
+            <hr />
+          </li>
+        </HeaderMenu>
+      )}
+      <div className="btn" onClick={toggleNav}>
+        <img src={navMenu} alt="ícone de menu" />
+      </div>
     </HeaderContainer>
   );
 };
