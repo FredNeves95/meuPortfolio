@@ -78,9 +78,9 @@ const HeaderMenu = styled.ul`
             border: 1px solid;
             border-image: linear-gradient(
                 to right,
-                rgba(0, 98, 102, 1) 1%,
-                #03989e 50%,
-                rgba(0, 98, 102, 1) 100%
+                rgba(0, 64, 66, 1) 0%,
+                rgba(3, 152, 158, 1) 50%,
+                rgba(0, 64, 66, 1) 100%
               )
               100% 0 100% 0/3px 0 3px 0 stretch;
           }
