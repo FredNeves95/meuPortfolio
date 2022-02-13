@@ -1,6 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 
+
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
@@ -28,6 +29,7 @@ function App() {
       <Header />
       <Body>
         <AboutMe />
+
         <Skills />
         <Projects />
         <Contact />
