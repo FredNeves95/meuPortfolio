@@ -2,18 +2,31 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import navMenu from "../images/navmenu.png";
+import Link from "react-scroll/modules/components/Link";
 
 const HeaderContainer = styled.div`
-  background-color: black;
-  height: 14vh;
-  width: 100vw;
-  padding: 8px;
   position: fixed;
   top: 0;
+  height: 132px;
+  z-index: 1;
+
+  hr {
+    border: none;
+    background-color: #03989e;
+    height: 1px;
+    width: 100%;
+  }
+`;
+const HeaderStyle = styled.div`
+  background-color: black;
+  padding: 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  //teste
+  justify-content: space-around;
+  height: 132px;
+  width: 100vw;
+  position: relative;
+
   img {
     height: 100%;
   }
@@ -41,7 +54,7 @@ const HeaderMenu = styled.ul`
   list-style-type: none;
 
   li {
-    margin: 8px;
+    margin: 0 8px;
     padding: 4px;
     font-size: 20px;
     color: gray;
@@ -65,9 +78,9 @@ const HeaderMenu = styled.ul`
             border: 1px solid;
             border-image: linear-gradient(
                 to right,
-                rgba(0, 98, 102, 1) 1%,
-                #03989e 50%,
-                rgba(0, 98, 102, 1) 100%
+                rgba(0, 64, 66, 1) 0%,
+                rgba(3, 152, 158, 1) 50%,
+                rgba(0, 64, 66, 1) 100%
               )
               100% 0 100% 0/3px 0 3px 0 stretch;
           }
@@ -97,8 +110,6 @@ const HeaderMenu = styled.ul`
             #03989e 50%,
             rgba(0, 98, 102, 1) 100%
           );
-        /* border-image: 
-          100% 0 100% 0/3px 0 3px 0 stretch; */
       }
     }
     .items:nth-child(1) {
@@ -146,33 +157,50 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <img src={logo} alt="Logotipo Frederico" />
-      {(toggleMenu || screenWidth > 620) && (
-        <HeaderMenu>
-          <li className="items">
-            Quem sou
-            <hr />
-          </li>
+      <HeaderStyle>
+        <img src={logo} alt="Logotipo Frederico" />
+        {(toggleMenu || screenWidth > 620) && (
+          <HeaderMenu>
+            <li className="items">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-132}
+              >
+                Quem sou
+              </Link>
+              <hr />
+            </li>
 
-          <li className="items">
-            Conhecimentos
-            <hr />
-          </li>
+            <li className="items">
+              <Link to="skills" spy={true} smooth={true} offset={-132}>
+                Conhecimentos
+              </Link>
+              <hr />
+            </li>
 
-          <li className="items">
-            Projetos
-            <hr />
-          </li>
+            <li className="items">
+              <Link to="projects" spy={true} smooth={true} offset={-132}>
+                Projetos
+              </Link>
+              <hr />
+            </li>
 
-          <li className="items">
-            Contato
-            <hr />
-          </li>
-        </HeaderMenu>
-      )}
-      <div className="btn" onClick={toggleNav}>
-        <img src={navMenu} alt="ícone de menu" />
-      </div>
+            <li className="items">
+              <Link to="contact" spy={true} smooth={true} offset={-132}>
+                Contato
+              </Link>
+              <hr />
+            </li>
+          </HeaderMenu>
+        )}
+        <div className="btn" onClick={toggleNav}>
+          <img src={navMenu} alt="ícone de menu" />
+        </div>
+      </HeaderStyle>
+      <hr />
     </HeaderContainer>
   );
 };
