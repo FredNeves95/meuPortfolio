@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import eu from "../images/eu.jpeg";
-import ScrollAnimation from "react-animate-on-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Container = styled.div`
   background-color: black;
@@ -20,21 +21,12 @@ const Container = styled.div`
     width: 50%;
     min-width: 310px;
     text-align: center;
+    /* animation: slideInLeft;
+    animation-duration: 2s; */
 
     img {
       max-width: 50vw;
       max-height: 35vh;
-      animation: Appear 2s ease-in-out;
-      @keyframes Appear {
-        from {
-          opacity: 0;
-          margin-right: 200px;
-        }
-        to {
-          opacity: 1;
-          margin-right: 0;
-        }
-      }
     }
   }
 
@@ -45,6 +37,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
+    /* animation: slideInRight;
+    animation-duration: 2s; */
 
     p {
       font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
@@ -59,17 +53,7 @@ const Container = styled.div`
     .minor {
       width: 100%;
       font-size: 26px;
-      animation: Appear2 2s ease-in-out;
-      @keyframes Appear2 {
-        from {
-          opacity: 0;
-          margin-left: 200px;
-        }
-        to {
-          opacity: 1;
-          margin-left: 0;
-        }
-      }
+      /* animation: Appear2 2s ease-in-out; */
     }
 
     .major {
@@ -77,34 +61,10 @@ const Container = styled.div`
       font-size: 42px;
       font-weight: bold;
       text-shadow: 1px 2px #03989e;
-
-      animation: Appear2 2s ease-in-out;
-      @keyframes Appear2 {
-        from {
-          opacity: 0;
-          margin-left: 200px;
-        }
-        to {
-          opacity: 1;
-          margin-left: 0;
-        }
-      }
     }
 
     .link {
       border: 1px solid #03989e;
-      animation: Appear2 2s ease-in-out;
-      @keyframes Appear2 {
-        from {
-          opacity: 0;
-          margin-left: 200px;
-        }
-        to {
-          opacity: 1;
-          margin-left: 0;
-        }
-      }
-
       background: linear-gradient(
         45deg,
         rgba(0, 64, 66, 1) 0%,
@@ -135,12 +95,28 @@ const Container = styled.div`
 `;
 
 const AboutMe = () => {
+  AOS.init();
   return (
     <Container id="about">
-      <div className="slide-right">
+      <div
+        className="slide-right"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+        data-aos-mirror="true"
+      >
         <img src={eu} alt="Minha foto" />
       </div>
-      <div className="slide-left">
+
+      <div
+        className="slide-left"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+        data-aos-mirror="true"
+      >
         <p className="minor">Olá, eu sou </p>
         <p className="major">Frederico.</p>
 
