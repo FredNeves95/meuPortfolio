@@ -68,9 +68,8 @@ const Modal = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8px;
-  width: 60vw;
+  width: 80vw;
   max-width: 500px;
-  height: 36vh;
   max-height: 400px;
   img {
     width: 60px;
