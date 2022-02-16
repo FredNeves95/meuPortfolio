@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 0;
   position: absolute;
   top: 132px;
-
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   align-content: center;
