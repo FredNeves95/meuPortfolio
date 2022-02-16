@@ -19,26 +19,22 @@ const Container = styled.div`
 
   .slide-right {
     width: 50%;
-    min-width: 310px;
+    min-width: 350px;
     text-align: center;
-    /* animation: slideInLeft;
-    animation-duration: 2s; */
-
     img {
-      max-width: 50vw;
-      max-height: 35vh;
+      max-width: 70vw;
+      max-height: 50vh;
     }
   }
 
   .slide-left {
+    min-height: 30vh;
     width: 50%;
-    min-width: 310px;
+    min-width: 350px;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* animation: slideInRight;
-    animation-duration: 2s; */
 
     p {
       font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
@@ -53,7 +49,6 @@ const Container = styled.div`
     .minor {
       width: 100%;
       font-size: 26px;
-      /* animation: Appear2 2s ease-in-out; */
     }
 
     .major {
