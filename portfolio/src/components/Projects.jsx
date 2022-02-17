@@ -16,15 +16,12 @@ const Container = styled.div`
   width: 100%;
   position: absolute;
   top: 186vh;
-  p {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-      "Times New Roman", serif;
-    padding: 3vh 0 0 5vw;
-  }
 
   .minor {
     width: 100%;
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    padding: 3vh 0 0 5vw;
   }
 
   .major {
@@ -32,6 +29,8 @@ const Container = styled.div`
     font-size: 42px;
     font-weight: bold;
     text-shadow: 1px 2px #03989e;
+    padding: 3vh 0 0 5vw;
+    font-family: "Poppins", sans-serif;
   }
 `;
 
@@ -51,7 +50,7 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   width: 280px;
-  margin: 0 8px;
+  margin: 8px 16px;
   box-shadow: 1px 2px 3px #03989e;
   cursor: pointer;
   img {
@@ -59,22 +58,18 @@ const Card = styled.div`
     height: 120px;
   }
 
-  p {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-      "Times New Roman", serif;
-    padding: 0;
-    margin: 0 0 8px 0;
-  }
-
   .minor {
     width: 100%;
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
   }
 
   .major {
     width: 100%;
     text-align: center;
+    padding: 0;
     font-size: 36px;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     text-shadow: 1px 2px #03989e;
   }
@@ -95,12 +90,6 @@ const Modal = styled.div`
     align-self: center;
   }
 
-  p {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-      "Times New Roman", serif;
-    margin: 0 0 8px 0;
-  }
-
   a {
     text-decoration: none;
     color: white;
@@ -113,14 +102,17 @@ const Modal = styled.div`
     text-shadow: 1px 2px #03989e;
     align-self: center;
     padding: 8px;
+    font-family: "Poppins", sans-serif;
   }
   .minor {
     font-size: 20px;
     list-style-position: outside;
     list-style-type: circle;
     margin: 4px 16px;
+    font-family: "Roboto", sans-serif;
   }
   .link {
+    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     color: white;

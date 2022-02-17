@@ -21,22 +21,20 @@ const Container = styled.div`
   position: absolute;
   top: 100vh;
 
-  p {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-      "Times New Roman", serif;
-    padding: 3vh 0 0 5vw;
-  }
-
   .minor {
     width: 100%;
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    padding: 3vh 0 0 5vw;
   }
 
   .major {
+    font-family: "Poppins", sans-serif;
     width: 100%;
     font-size: 42px;
     font-weight: bold;
     text-shadow: 1px 2px #03989e;
+    padding: 3vh 0 0 5vw;
   }
 `;
 
@@ -76,13 +74,8 @@ const Modal = styled.div`
     align-self: center;
   }
 
-  p {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-      "Times New Roman", serif;
-    margin: 0 0 8px 0;
-  }
-
   .major {
+    font-family: "Poppins", sans-serif;
     font-size: 42px;
     font-weight: bold;
     text-shadow: 1px 2px #03989e;
@@ -90,6 +83,7 @@ const Modal = styled.div`
     padding: 8px;
   }
   .minor {
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     list-style-position: outside;
     list-style-type: circle;

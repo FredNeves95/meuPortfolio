@@ -37,11 +37,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: start;
 
-    p {
-      font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
-        "Times New Roman", serif;
-    }
-
     a {
       text-decoration: none;
       color: white;
@@ -50,6 +45,7 @@ const Container = styled.div`
     .minor {
       width: 100%;
       font-size: 26px;
+      font-family: "Roboto", sans-serif;
     }
 
     .major {
@@ -57,9 +53,11 @@ const Container = styled.div`
       font-size: 42px;
       font-weight: bold;
       text-shadow: 1px 2px #03989e;
+      font-family: "Poppins", sans-serif;
     }
 
     .link {
+      font-family: "Roboto", sans-serif;
       border: 1px solid #03989e;
       background: linear-gradient(
         45deg,
