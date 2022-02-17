@@ -118,7 +118,7 @@ const AboutMe = () => {
 
         <a
           href="https://www.linkedin.com/in/frederico-neves-de-araujo/"
-          target="blank"
+          target="_blank"
         >
           <div className="link">
             <p>Linkedin</p>

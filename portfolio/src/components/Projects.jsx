@@ -173,7 +173,7 @@ const Projects = () => {
           <div className="link">
             <a
               href="https://tenuous-brother.surge.sh/"
-              target="blank"
+              target="_blank"
               alt="Link para Labe-x"
             >
               Labe-X
@@ -201,7 +201,7 @@ const Projects = () => {
           <div className="link">
             <a
               href="http://joyous-apparatus.surge.sh/"
-              target="blank"
+              target="_blank"
               alt="Link para Pokedex"
             >
               Pokedex
