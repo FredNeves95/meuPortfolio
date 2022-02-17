@@ -89,7 +89,7 @@ const Modal = styled.div`
   padding: 8px;
   width: 80vw;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 600px;
   img {
     width: 60px;
     align-self: center;
@@ -101,6 +101,12 @@ const Modal = styled.div`
     margin: 0 0 8px 0;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
   .major {
     font-size: 42px;
     font-weight: bold;
@@ -113,6 +119,33 @@ const Modal = styled.div`
     list-style-position: outside;
     list-style-type: circle;
     margin: 4px 16px;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: 8px 0;
+    height: 28px;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 64, 66, 1) 0%,
+      rgba(3, 152, 158, 1) 50%,
+      rgba(0, 64, 66, 1) 100%
+    );
+
+    :hover {
+      transition-duration: 0.5s;
+      border: 1px solid rgba(0, 64, 66, 1);
+      background: linear-gradient(
+        45deg,
+        rgba(27, 27, 27, 1) 0%,
+        rgba(0, 104, 108, 1) 50%,
+        rgba(27, 27, 27, 1) 100%
+      );
+    }
   }
 `;
 
@@ -132,9 +165,58 @@ const Projects = () => {
     setModalTech(tech);
 
     if (tech === "labex") {
-      setModal(<Modal>Labex</Modal>);
+      setModal(
+        <Modal>
+          <p className="major">Labe-X</p>
+          <p className="minor">
+            Esse projeto foi desenvolvido em React.js, como uma simulação de um
+            ambiente de viagens intergaláticas.
+          </p>
+          <p className="minor">
+            Foi feito consumo de API, navegação em rotas, autenticação do
+            usuário, utilização dos Hooks, styled-components, material UI,
+            atenção à responsividade, entre outros.
+          </p>
+          <p className="minor">Confira esse projeto:</p>
+          <div className="link">
+            <a
+              href="https://tenuous-brother.surge.sh/"
+              target="blank"
+              alt="Link para Labe-x"
+            >
+              Labe-X
+            </a>
+          </div>
+          <p className="minor">Para acessar a área de administrador:</p>
+          <p className="minor">Usuário: fredbneves95@gmail.com</p>
+          <p className="minor">Senha: 123456</p>
+        </Modal>
+      );
     } else if (tech === "pokedex") {
-      setModal(<Modal>Pokedex</Modal>);
+      setModal(
+        <Modal>
+          <p className="major">Pokedex</p>
+          <p className="minor">
+            Esse projeto foi desenvolvido em React.js, o intuito é mostrar os
+            pokemons existentes e algumas de suas características.
+          </p>
+          <p className="minor">
+            Foi feito consumo de API, navegação em rotas, utilização dos Hooks,
+            contexto global, styled-components, material UI, paginação, atenção
+            à responsividade, entre outros.
+          </p>
+          <p className="minor">Confira esse projeto:</p>
+          <div className="link">
+            <a
+              href="http://joyous-apparatus.surge.sh/"
+              target="blank"
+              alt="Link para Pokedex"
+            >
+              Pokedex
+            </a>
+          </div>
+        </Modal>
+      );
     } else {
       setModal(<></>);
     }
