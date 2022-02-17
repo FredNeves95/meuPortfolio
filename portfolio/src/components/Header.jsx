@@ -171,28 +171,24 @@ const Header = () => {
               >
                 Quem sou
               </Link>
-              <hr />
             </li>
 
             <li className="items">
               <Link to="skills" spy={true} smooth={true} offset={-132}>
                 Conhecimentos
               </Link>
-              <hr />
             </li>
 
             <li className="items">
               <Link to="projects" spy={true} smooth={true} offset={-132}>
                 Projetos
               </Link>
-              <hr />
             </li>
 
             <li className="items">
               <Link to="contact" spy={true} smooth={true} offset={-132}>
                 Contato
               </Link>
-              <hr />
             </li>
           </HeaderMenu>
         )}
