@@ -104,7 +104,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const Skills = () => {
   AOS.init();
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const [modalTech, setModalTech] = useState();
   const [modal, setModal] = useState();
 
@@ -178,7 +178,6 @@ const Skills = () => {
   const handleClose = (e) => {
     setOpen(false);
     setModalTech();
-    console.log(modalTech);
   };
 
   return (
@@ -263,5 +262,4 @@ const Skills = () => {
     </Container>
   );
 };
-
 export default Skills;
