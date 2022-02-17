@@ -4,12 +4,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState } from "react";
 
+import labex from "../images/labex.png";
+import pokedex from "../images/pokedex.png";
+
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
 
 const Container = styled.div`
   background-color: black;
-  height: 86vh;
+  min-height: 86vh;
   width: 100%;
   position: absolute;
   top: 186vh;
@@ -45,11 +48,35 @@ const CardContainer = styled.div`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  padding: 0px 16px;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+  margin: 0 8px;
+  box-shadow: 1px 2px 3px #03989e;
+  cursor: pointer;
   img {
-    width: 100px;
-    cursor: pointer;
+    width: 260px;
+    height: 120px;
+  }
+
+  p {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
+      "Times New Roman", serif;
+    padding: 0;
+    margin: 0 0 8px 0;
+  }
+
+  .minor {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .major {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 1px 2px #03989e;
   }
 `;
 
@@ -103,6 +130,14 @@ const Projects = () => {
   const handleClickOpen = (tech) => {
     setOpen(true);
     setModalTech(tech);
+
+    if (tech === "labex") {
+      setModal(<Modal>Labex</Modal>);
+    } else if (tech === "pokedex") {
+      setModal(<Modal>Pokedex</Modal>);
+    } else {
+      setModal(<></>);
+    }
   };
 
   const handleClose = (e) => {
@@ -116,16 +151,34 @@ const Projects = () => {
       <p className="minor"> Clique nos cards para mais informações.</p>
       <CardContainer>
         <Card
-          data-aos="flip-up"
+          data-aos="zoom-in-up"
           data-aos-duration="2000"
           data-aos-mirror="true"
           data-aos-once="false"
+          onClick={() => handleClickOpen("labex")}
         >
-          <img
-            onClick={() => handleClickOpen("html")}
-            // src={}
-            alt="Logo HTML5"
-          />
+          <div>
+            <p className="major">Labe-x</p>
+          </div>
+
+          <div>
+            <img src={labex} alt="Projeto Labe-X" />
+          </div>
+        </Card>
+        <Card
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          onClick={() => handleClickOpen("pokedex")}
+        >
+          <div>
+            <p className="major">Pokedex</p>
+          </div>
+
+          <div>
+            <img src={pokedex} alt="Projeto Pokedex" />
+          </div>
         </Card>
       </CardContainer>
       <Dialog
