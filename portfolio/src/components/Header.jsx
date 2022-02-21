@@ -39,6 +39,7 @@ const HeaderStyle = styled.div`
   }
 
   @media screen and (max-width: 620px) {
+    justify-content: start;
     .btn {
       display: block;
       cursor: pointer;
