@@ -4,4 +4,4 @@ Nesse projeto, foi criada uma landing page como forma de me apresentar e apresen
 
 Todo o site foi desenvolvido em react.js.
 
-link: fred-neves-portfolio.surge.sh
+link: frederico-neves.vercel.app
