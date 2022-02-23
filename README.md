@@ -1,4 +1,4 @@
-# Meu Portfolio (EM DESENVOLVIMENTO)
+# Meu Portfolio
 
 Nesse projeto, foi criada uma landing page como forma de me apresentar e apresentar alguns dos projetos que eu realizei durante a minha trajetória como desenvolvedor.
 
