@@ -8,6 +8,7 @@ import htmlLogo from "../images/html5.svg";
 import cssLogo from "../images/css3.svg";
 import javascriptLogo from "../images/javascript.svg";
 import reactLogo from "../images/reactjs.svg";
+import jestLogo from "../images/jest.svg";
 import gitLogo from "../images/git.svg";
 
 import Dialog from "@mui/material/Dialog";
@@ -52,7 +53,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   width: fit-content;
-  padding: 0px 16px;
+  padding: 8px 16px;
   img {
     width: 100px;
     cursor: pointer;
@@ -124,8 +125,10 @@ const Skills = () => {
           <p className="major">CSS</p>
           <ul>
             <li className="minor">Estilização do código</li>
+            <li className="minor">Responsividade</li>
             <li className="minor">
-              Utilização de pré-processadores (ex. SCSS)
+              Utilização de bibliotecas como Bootstrap, Material UI, entre
+              outras.
             </li>
           </ul>
         </Modal>
@@ -155,6 +158,17 @@ const Skills = () => {
           </ul>
         </Modal>
       );
+    } else if (tech === "jest") {
+      setModal(
+        <Modal>
+          <img src={jestLogo} alt="Logotipo jest" />
+          <p className="major">Jest</p>
+          <ul>
+            <li className="minor">Framework de testes em javascript</li>
+            <li className="minor">Conhecimento em testes automatizados</li>
+          </ul>
+        </Modal>
+      );
     } else if (tech === "git") {
       setModal(
         <Modal>
@@ -181,7 +195,7 @@ const Skills = () => {
       <CardContainer>
         <Card
           data-aos="flip-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
         >
@@ -194,7 +208,7 @@ const Skills = () => {
 
         <Card
           data-aos="flip-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
         >
@@ -207,7 +221,7 @@ const Skills = () => {
 
         <Card
           data-aos="flip-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
         >
@@ -220,7 +234,7 @@ const Skills = () => {
 
         <Card
           data-aos="flip-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
         >
@@ -233,7 +247,20 @@ const Skills = () => {
 
         <Card
           data-aos="flip-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+        >
+          <img
+            onClick={() => handleClickOpen("jest")}
+            src={jestLogo}
+            alt="Logo Jest"
+          />
+        </Card>
+
+        <Card
+          data-aos="flip-up"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
         >

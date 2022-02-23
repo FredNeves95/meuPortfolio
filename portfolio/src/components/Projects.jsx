@@ -226,7 +226,7 @@ const Projects = () => {
       <CardContainer>
         <Card
           data-aos="zoom-in-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
           onClick={() => handleClickOpen("labex")}
@@ -241,7 +241,7 @@ const Projects = () => {
         </Card>
         <Card
           data-aos="zoom-in-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
           onClick={() => handleClickOpen("pokedex")}

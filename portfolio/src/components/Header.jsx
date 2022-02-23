@@ -126,12 +126,12 @@ const HeaderMenu = styled.ul`
       padding: 16px 0;
       text-align: center;
       border: 1px solid #03989e;
+      hr {
+        display: none;
+      }
       :hover {
         color: white;
         transition: 1s ease-in;
-        hr {
-          animation: none;
-        }
       }
     }
   }
@@ -172,24 +172,28 @@ const Header = () => {
               >
                 Quem sou
               </Link>
+              <hr />
             </li>
 
             <li className="items">
               <Link to="skills" spy={true} smooth={true} offset={-132}>
                 Conhecimentos
               </Link>
+              <hr />
             </li>
 
             <li className="items">
               <Link to="projects" spy={true} smooth={true} offset={-132}>
                 Projetos
               </Link>
+              <hr />
             </li>
 
             <li className="items">
               <Link to="contact" spy={true} smooth={true} offset={-132}>
                 Contato
               </Link>
+              <hr />
             </li>
           </HeaderMenu>
         )}
@@ -197,7 +201,6 @@ const Header = () => {
           <img src={navMenu} alt="ícone de menu" />
         </div>
       </HeaderStyle>
-      <hr />
     </HeaderContainer>
   );
 };
