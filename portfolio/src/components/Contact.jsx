@@ -73,7 +73,7 @@ const Contact = () => {
       <CardContainer>
         <a
           data-aos="zoom-out-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-once="false"
           href="https://www.linkedin.com/in/frederico-neves-de-araujo/"
           target="_blank"
@@ -83,7 +83,7 @@ const Contact = () => {
 
         <a
           data-aos="zoom-out-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-once="false"
           href="https://github.com/FredNeves95"
           target="_blank"
@@ -93,7 +93,7 @@ const Contact = () => {
 
         <a
           data-aos="zoom-out-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-once="false"
           href="https://wa.me/5531996192852?text=Olá, Fred.%20 Vi seu portfólio e decidi entrar em contato."
           target="_blank"
@@ -103,7 +103,7 @@ const Contact = () => {
 
         <a
           data-aos="zoom-out-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-once="false"
           href="mailto:fredbneves95@gmail.com"
           target="_blank"
