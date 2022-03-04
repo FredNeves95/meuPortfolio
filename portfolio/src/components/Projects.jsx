@@ -200,7 +200,7 @@ const Projects = () => {
           <p className="minor">Confira esse projeto:</p>
           <div className="link">
             <a
-              href="http://joyous-apparatus.surge.sh/"
+              href="https://fredpokedex.vercel.app/"
               target="_blank"
               alt="Link para Pokedex"
             >
