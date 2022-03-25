@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import labex from "../images/labex.png";
 import pokedex from "../images/pokedex.png";
+import rappi from "../images/rappi.png";
 
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
@@ -42,6 +43,13 @@ const CardContainer = styled.div`
   align-content: start;
   justify-content: center;
   margin-top: 10vh;
+
+  @media (max-width: 768px) {
+    margin-top: 8px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 `;
 
 const Card = styled.div`
@@ -53,8 +61,8 @@ const Card = styled.div`
   margin: 8px 16px;
   box-shadow: 1px 2px 3px #03989e;
   cursor: pointer;
+
   img {
-    width: 260px;
     height: 120px;
   }
 
@@ -72,6 +80,10 @@ const Card = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     text-shadow: 1px 2px #03989e;
+  }
+
+  @media (max-width: 768px) {
+    height: 164px;
   }
 `;
 
@@ -209,6 +221,31 @@ const Projects = () => {
           </div>
         </Modal>
       );
+    } else if (tech === "rappi4") {
+      setModal(
+        <Modal>
+          <p className="major">Pokedex</p>
+          <p className="minor">
+            Esse projeto foi desenvolvido em React.js, exclusivamente para
+            mobile. O intuito é representar um aplicativo de comida e bebida.
+          </p>
+          <p className="minor">
+            Foi feito consumo de API, cadastro e autenticação de usuário,
+            navegação em rotas, utilização dos Hooks, contexto global,
+            styled-components, material UI, entre outros.
+          </p>
+          <p className="minor">Confira esse projeto:</p>
+          <div className="link">
+            <a
+              href="https://fred-rappi.vercel.app/"
+              target="_blank"
+              alt="Link para Rappi4"
+            >
+              Rappi4
+            </a>
+          </div>
+        </Modal>
+      );
     } else {
       setModal(<></>);
     }
@@ -252,6 +289,21 @@ const Projects = () => {
 
           <div>
             <img src={pokedex} alt="Projeto Pokedex" />
+          </div>
+        </Card>
+        <Card
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          onClick={() => handleClickOpen("rappi4")}
+        >
+          <div>
+            <p className="major">Rappi4</p>
+          </div>
+
+          <div>
+            <img src={rappi} alt="Projeto Rappi" id="happy" />
           </div>
         </Card>
       </CardContainer>
